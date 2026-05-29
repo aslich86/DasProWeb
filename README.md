@@ -75,7 +75,7 @@ xdg-open index.html
 
 ## Tautan
 
-- [Webnya] (https://spontaneous-cascaron-646061.netlify.app/)
+- [Webnya](https://spontaneous-cascaron-646061.netlify.app/)
 - [Profil Dicoding](https://www.dicoding.com/users/aslich)
 
 ---
