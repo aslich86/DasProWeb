@@ -1,0 +1,163 @@
+/* Reset margin dan padding bawaan browser */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* --- HEADER & NAV --- */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-bottom: 20px;
+    color: #bdc3c7;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    /* Flexbox pada Navigasi */
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+/* --- MAIN LAYOUT (FLEXBOX) --- */
+main {
+    display: flex;
+    /* Flexbox utama seperti di gambar referensi */
+    max-width: 1200px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+#content {
+    flex: 3;
+    /* Mengambil ruang 3 bagian */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+article {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+article h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+article h3 {
+    color: #2980b9;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* --- ASIDE --- */
+aside {
+    flex: 1;
+    /* Mengambil ruang 1 bagian */
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    align-self: flex-start;
+    /* Agar aside tidak ikut memanjang ke bawah */
+}
+
+aside h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+aside figure {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+aside img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50%;
+    /* Membuat foto berbentuk bulat */
+    border: 3px solid #ecf0f1;
+}
+
+aside figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #7f8c8d;
+}
+
+.bio-info p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* --- MEDIA QUERY UNTUK RESPONSIVITAS (NILAI PLUS) --- */
+@media screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+        /* Mengubah layout 2 kolom menjadi 1 kolom ke bawah */
+    }
+
+    aside {
+        align-self: stretch;
+        /* Memenuhi lebar container pada layar HP */
+        order: -1;
+        /* Opsi: Menampilkan biodata di atas konten pada layar kecil */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
